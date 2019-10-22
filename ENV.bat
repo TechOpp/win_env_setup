@@ -128,7 +128,7 @@ EXIT /B
   set path=%common_path%;%window_path%;%java_path%;%tools%;%jvmstat_home%\bat;%server%;%jme_path%
   
   
-  ECHO Now, Java %COLOR% ,GCC, JME, JVM Monitor, Maven, Ant, php, nasm, Spring, Hibernate, openssl, Nodejs are availables...  
+  ECHO Now, Java %COLOR%, GCC, JME, JVM Monitor, Maven, Ant, php, nasm, Spring, Hibernate, openssl, Nodejs are availables...  
  
   VER > NUL # reset ERRORLEVEL
   GOTO :EOF # return from CALL
