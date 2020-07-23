@@ -51,7 +51,10 @@ NOTE: git mergetool (WinMerge) is eassiar way to deal with lots of conflict.
 $ git merge --abort		//  to abort the merge
 
 >>Dealing with Branch
-Creating a branch allows you to create a duplicate of the master (trunk) and make several updates without affecting the master. For example, when developing a program if a big fix was need that could take weeks or months, a branch could be created for that fix. Once you've fixed the bug, you could merge your branch back into the master.
+Creating a branch allows you to create a duplicate of the master (trunk) and make several updates without affecting the master. 
+For example, when developing a program if a big fix was need that could take weeks or months, a branch could be created for that fix. 
+Once you've fixed the bug, you could merge your branch back into the master.
+
 $ git branch <New Branch> 		// create a branch in your local repository and working folder
 $ git checkout <Branch Name>	// switch to the branch. Now prompt will change from master to brach to show where you are woring now. Now use all thing as master git but changes will in branch
 $ git branch 			// show local repo branch only
@@ -64,12 +67,12 @@ $ git checkout master
 $ git merge <Branch Name>		// Once in master (or other branch) run this command to mearge the branch
 $ add the files to git
 $ commit the added file in local repo
-$ push the file to remote repo
+$ push the file to remote repo	// add to master if it is a file or folder as file or folder
 >> delete local and remote branches after merging a branch you no longer want to keep the local or remote branch
 $ git branch -d <Branch Name>		//Delete local branch
 $ git push origin --delete <Branch Name>	// Delete Remote branch
 
-$git log		// log all commit 
+$ git log		// log all commit 
 
 
 
