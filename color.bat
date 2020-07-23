@@ -826,6 +826,6 @@ EXIT /B
   GOTO END_CASE
 
 :END_CASE
-	echo "Color changed"
+	echo "Color changed now"
 :DEFAULT_CASE
-	echo "This number has to set both foreground and background color same which is Error, so no any changes made"
+	echo "This number has to set both foreground and background color same which is Error, so no any changes made Retry"
