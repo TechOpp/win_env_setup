@@ -77,20 +77,20 @@ EXIT /B
   set java_path=%java_home%\bin
  
   set common_path=c:\users\admin
-  set window_path=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\MySQL\MySQL Utilities 1.3.6\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin
-  set tools=D:\Java\apache-maven-3.2.5\bin;D:\Java\apache-ant-1.9.4\bin;D:\WORK\MinGW\bin;D:\WORK\win-exTOOLS\curl-7.68.0-win64-mingw\bin;D:\WORK\MinGW\git\cmd;D:\WEB_SERVERS\php;D:\WEB_SERVERS\php\ComposerSetup;D:\WORK\NASM;D:\WORK\win-exTOOLS;D:\WEB_SERVERS\VHostServer\dev_mai\vendor\bin;D:\WEB_SERVERS\OpenSSL-Win64\bin;D:\WEB_SERVERS\node_Apps\onsUI\Yarn\bin;D:\Java\dex2jar-2.0;D:\WEB_SERVERS\SQLite;D:\WEB_SERVERS\Redis;D:\WEB_SERVERS\python;D:\WORK\win-exTOOLS\ffmpeg
+  set window_path=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\MySQL\MySQL Utilities 1.3.6\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin
+  set tools=D:\Java\apache-maven-3.2.5\bin;D:\Java\apache-ant-1.9.4\bin;D:\WORK\MinGW\bin;D:\WORK\win-exTOOLS\curl-7.68.0-win64-mingw\bin;D:\WORK\MinGW\git\cmd;D:\WORK\MinGW\gawk\bin;D:\WEB_SERVERS\php\ActivePHP;D:\WEB_SERVERS\php\ComposerSetup;D:\WORK\NASM;D:\WORK\win-exTOOLS;D:\WEB_SERVERS\OpenSSL-Win64\bin;D:\WEB_SERVERS\nodejs\Yarn\bin;D:\Java\dex2jar-2.0;D:\WEB_SERVERS\SQLite;D:\WEB_SERVERS\Redis;D:\WEB_SERVERS\python;D:\WORK\win-exTOOLS\ffmpeg
   set servers=D:\WEB_SERVERS\ApacheWebServer24\bin;D:\WEB_SERVERS\apache-tomcat-7.0.23\bin;D:\WEB_SERVERS\glassfish-4.1\bin;D:\WEB_SERVERS\jboss-as-7.1.1.Final\bin
  
   MAVEN_OPTS="-Xms256m -Xmx512m"
   set ANT_HOME=D:\Java\apache-ant-1.9.4\
   set OPENSSL_CONF=D:\WEB_SERVERS\OpenSSL-Win64\bin\openssl.cfg
-  set NODE_PATH=D:\WEB_SERVERS\nodejs;D:\WEB_SERVERS\nodejs\npm-global-repo
+  set NODE_PATH=D:\WEB_SERVERS\nodejs\ActiveNode;D:\WEB_SERVERS\nodejs\npm-global-repo
  
   set classpath=.
   set default_classpath=D:\WORK\JavaPractics;D:\Java\Project Drive\running project
  
   set jar1=;D:\Java\LIB\C\
-  set default_jar=%jar1%servlet-api.jar%jar1%mysql.jar%jar1%ojdbc6.jar%jar1%json-20171018.jar
+  set default_jar=%jar1%servlet-api.jar%jar1%mysql.jar%jar1%ojdbc6.jar%jar1%json-20171018.jar%jar%json-lib-2.4-jdk15.jar
  
   set jvm_mon=;D:\Java\lib\R\
   set jvm_state=%jvm_mon%basic.jar%jvm_mon%configurepolicy.jar%jvm_mon%jvmps.jar%jvm_mon%jvmsnap.jar%jvm_mon%jvmstat.jar%jvm_mon%jvmstat_graph.jar%jvm_mon%jvmstat_util.jar%jvm_mon%perf.jar%jvm_mon%perfagent.jar%jvm_mon%perfagentstubs.jar%jvm_mon%perfdata.jar%jvm_mon%visualgc.jar
@@ -103,21 +103,27 @@ EXIT /B
  
   set jme=;D:\Java\LIB\M\
   set jme_lib=%jme%cldc_1.8.jar%jme%configuration_1.0.jar%jme%device-io_1.0.jar%jme%device-io_1.1.jar%jme%device-io_1.1_adc.jar%jme%device-io_1.1_atcmd.jar%jme%device-io_1.1_counter.jar%jme%device-io_1.1_dac.jar%jme%device-io_1.1_generic.jar%jme%device-io_1.1_gpio.jar%jme%device-io_1.1_i2cbus.jar%jme%device-io_1.1_mmio.jar%jme%device-io_1.1_modem.jar%jme%device-io_1.1_pwm.jar%jme%device-io_1.1_spibus.jar%jme%device-io_1.1_uart.jar%jme%device-io_1.1_watchdog.jar%jme%gcf_1.8.jar%jme%httpclient_1.1.jar%jme%json_1.0.jar%jme%jsr75_1.0-fc.jar%jme%jsr120_1.1.jar%jme%jsr172_1.0.jar%jme%jsr177_1.0-apdu.jar%jme%jsr177_1.0-crypto.jar%jme%jsr179_1.0.jar%jme%jsr280_1.0.jar%jme%luikey-javadriver.jar%jme%meep_8.0.jar%jme%meep_8.0-cellular.jar%jme%meep_8.0-event.jar%jme%meep_8.0-io.jar%jme%meep_8.0-key.jar%jme%meep_8.0-lui.jar%jme%meep_8.0-media.jar%jme%meep_8.0-power.jar%jme%meep_8.0-rms.jar%jme%meep_8.0-swm.jar%jme%oauth2_1.0.jar%jme%runtime_update_1.0.jar%jme%satsa_extensions_api.jar%jme%ssl_extensions_api.jar%jme%compiler\me_plugin.jar%jme%ext\embedded-support-api.jar%jme%ext\security_api.jar
- 
+  
+  set sel=;D:\Java\LIB\SE\
+  set selenium_lib=%sel%byte-buddy-1.9.12.jar%sel%commons-exec-1.3.jar%sel%failureaccess-1.0.1.jar%sel%guava-27.1-jre.jar%sel%javax.servlet-api-3.1.0.jar%sel%jcip-annotations-1.0.jar%sel%jcommander-1.72.jar%sel%jeromq-0.5.1.jar%sel%jetty-lib-build-info.jar%sel%jnacl-1.0.0.jar%sel%listenablefuture-1.0.jar%sel%module-info.jar%sel%moved-bundle.jar%sel%okhttp-3.14.0.jar%sel%okio-1.17.3.jar%sel%opentracing-api-0.33.0.jar%sel%opentracing-noop-0.33.0.jar%sel%opentracing-tracerresolver-0.1.7.jar%sel%opentracing-util-0.33.0.jar%sel%slf4j-api-1.7.25.jar%sel%snakeyaml-1.24.jar
+  
   set and=;D:\Java\LIB\A\
   set android=%and%android.jar%and%android-util-2.5.1.jar
  
   set ANDROID_HOME=F:\AndroidENV\AndroidSDK
   set CORDOVA=%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;%ANDROID_HOME%\tools\bin
  
-  set classpath=%classpath%;%default_classpath%%default_jar%%jvm_state%%spring%%hibernate%%jme_lib%%android%
+  set classpath=%classpath%;%default_classpath%%default_jar%%jvm_state%%spring%%hibernate%%jme_lib%%android%%selenium_lib%
+ 
+  set CrossBrowserAppTest=D:\Java\Project Drive\running project\selenium-server-standalone-4.0.0-alpha-2\BrowserDrivers\geckodriver-v0.26.0-win64;D:\Java\Project Drive\running project\selenium-server-standalone-4.0.0-alpha-2\BrowserDrivers\chromedriver_win32
+  set Clang=D:\WORK\TinyC;D:\WORK\BorlandCPP\Bin
  
   set jvmstat_home=D:\Java\jvmstat(jvm-monitor)
   set jme_path=D:\Java\JDK\jme8_32bit\bin
-  set path=%common_path%;%window_path%;%java_path%;%tools%;%jvmstat_home%\bat;%servers%;%jme_path%;%NODE_PATH%;%CORDOVA%
+  set path=%common_path%;%window_path%;%java_path%;%tools%;%jvmstat_home%\bat;%servers%;%jme_path%;%NODE_PATH%;%CORDOVA%;%CrossBrowserAppTest%;%Clang%
   set JAVAME_SDK_HOME=D:\Java\JDK\jme8_32bit
  
-  ECHO Now, Java %COLOR%, GCC, JME, JVM Monitor, Maven, Ant, php, nasm, Spring, Hibernate, openssl, Nodejs, python, SQLite, Redis, Cordova are availables...
+  ECHO Now, Java %COLOR%, GCC, JME, JVM Monitor, Maven, Ant, php, nasm, Spring, Hibernate, openssl, Nodejs, python, SQLite, Redis, Cordova 4variants of C & CPP are availables...
  
   VER > NUL # reset ERRORLEVEL
   GOTO :EOF # return from CALL
