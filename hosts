@@ -1,0 +1,58 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+
+# Servers on JioFy router, if a defined domain doesn't have a folder location then that request handle by first virtual domain 
+# Postman Mail server 
+192.168.225.35	smtp.mai.com	#mail client contact with this two server for email communication
+192.168.225.35	imap.mai.com
+# All virtual servers on Apache web server
+192.168.225.35	rocksun				# Laravel test Vserver
+192.168.225.35	mail.mai.com		# Accessing client of mail agent
+192.168.225.35	dev.mai.com			# My initial app with my own UI
+192.168.225.35	maiapp				# Try to build our framework 
+192.168.225.35	test				# Test any thing and after completed put in mywork
+192.168.225.35	mywork				# my all worked application
+192.168.225.35	ssldomain			# Secure application test on this virtual server 
+192.168.225.35	www.sunny.com		# when no virtual domain work then main single domain response to request, by default this folder is www in server folder
+192.168.225.35	video.com
+192.168.225.35	shopping.com
+192.168.225.35	project.com
+192.168.225.35	MaiWordpress.com
+
+
+# Servers on Panasonic router, if a defined domain doesn't have a folder location then that request handle by first virtual domain 
+# Postman mail server 
+192.168.43.208	smtp.mai.com
+192.168.43.208	imap.mai.com
+# Apache web server 
+192.168.43.208	rocksun
+192.168.43.208	mail.mai.com
+192.168.43.208	dev.mai.com
+192.168.43.208	maiapp
+192.168.43.208	test
+192.168.43.208	mywork
+192.168.43.208	ssldomain
+192.168.43.208	www.sunny.com		# when no virtual domain work then main single domain response to request, by default this folder is www in server folder
+192.168.225.35	video
+192.168.225.35	shopping
+192.168.225.35	project.com
+192.168.225.35	MaiWordpress.com
