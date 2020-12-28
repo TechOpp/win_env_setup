@@ -1,6 +1,6 @@
-echo WIN_ENV-3.0(12November2020)
 @ECHO OFF
-
+rem WIN_ENV-3.0(27Dec2020)
+rem For Installation put this file in home directory and home directory has to be set in path environment variable
 SET /P COLOR="Enter java version no. (type 0, 1, 2, ...):"
 
 2>NUL CALL :CASE_%COLOR% 			# jump to :CASE_0, :CASE_1, ... etc.
@@ -80,10 +80,18 @@ EXIT /B
 :END_CASE
  rem JDK_HOME or JAVA_HOME is  needed by many other application like development environment.
   set jdk_home=%java_home%
- rem JAVA_PATH is neede by Operating System
+ rem JAVA_PATH is need by Operating System
   set java_path=%java_home%\bin
 
-  
+ rem On second run remaining part should not reset
+	if not defined SunEnv (
+					set SunEnv=Sunny Roy "sunnykr.bit@outlook.com"
+					title=Development Environment V3.0
+				) else (
+					echo Now JAVA %color% is available
+					goto path
+				)
+	
   rem This is the configuration for AWS-cli in python
   set AWS_CONFIG_FILE=D:\WEB_SERVERS\PyTHON\WORKSPACE\AWS_CUI_Config\config.ini
   rem This key needed by Firebase CLI to authenticate
@@ -144,10 +152,12 @@ EXIT /B
   set jvmstat_home=D:\Java\jvmstat(jvm-monitor)
   set JAVAME_SDK_HOME=D:\Java\JDK\jme8_32bit
   set jme_path=%JAVAME_SDK_HOME%\bin
+  ECHO Now, Java %COLOR%, GCC, JME, JVM Monitor, Maven, Ant, Gradle, Selenium, php, nasm, Spring, Hibernate, openssl, Nodejs, python, Ruby, Putty, SQLite, Redis, Memcache, IONIC, Cordova, 4 variants of C, CPP are availables... rem & ignore to printing remaining part of echo
+	
+  :path
   set path=%default_path%;%java_path%;%tools%;%jvmstat_home%\bat;%servers%;%jme_path%;%NODE_PATH%;%PHP_PATH%;%PYTHONPATH%;%Clang%;%Hybrid%;%CrossBrowserAppTest%;%IDE%;%ruby%
   
  
-  ECHO Now, Java %COLOR%, GCC, JME, JVM Monitor, Maven, Ant, Gradle, Selenium, php, nasm, Spring, Hibernate, openssl, Nodejs, python, Ruby, Putty, SQLite, Redis, Memcache, IONIC, Cordova, 4 variants of C &, CPP are availables... rem & ignore to printing remaining part of echo
  
   VER > NUL # reset ERRORLEVEL
   GOTO :EOF # return from CALL
