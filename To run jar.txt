@@ -1,0 +1,78 @@
+java -jar "D:\java\Project Drive\running project\MyWebCam.jar" myWebCam\Test    or,
+java -jar "D:\java\Project Drive\running project\MyWebCam.jar"
+
+java -jar "D:\java\Project Drive\running project\MyDownloader.jar" downloader\DownloadManager   or,
+java -jar "D:\java\Project Drive\running project\MyDownloader.jar"
+
+java -jar "D:\java\Project Drive\running project\OLBResSys.jar" frmWelCome     //uid:- hr  pwd:- hr
+java -jar "D:\java\Project Drive\running project\OLBResSys.jar"
+
+java -jar "D:\java\Project Drive\running project\hospital\hospital 1.33.jar"
+
+java -jar "D:\java\Project Drive\running project\jd-gui-1.6.2.jar"		// Java Dcompiler
+
+java -jar "E:\mysoftware\image file\Musical Insturment\ScoreDate-3.2\ScoreDate-3.2.jar"
+
+java -jar "D:\Java\Project Drive\running project\selenium-server-standalone-4.0.0-alpha-2\selenium-server-4.0.0-alpha-6.jar" standalone --port 1234	// selenium:  A server to test cross web page 
+
+javaw -jar "D:\Java\Project Drive\running project\ipscan.exe"		// Run onberd java-8. This is a IP tracker application
+
+javaw -jar "D:\Java\Project Drive\running project\logisim-win-2.7.1.exe"	// A java window application for logic gate  require to run java1.5
+
+java -jar "D:\Java\Project Drive\running project\Weka-3-8-4\weka.jar"	// Application for PCB design
+
+NOTE: All java 32bit has some running demo. From JDK4-32bit demo are in executable jar file, so to run those as following 
+IN JDK-4
+java -jar %JAVA_HOME%\demo\jfc\Java2D\Java2Demo.jar
+java -jar %JAVA_HOME%\demo\jfc\FileChooserDemo\FileChooserDemo.jar
+java -jar %JAVA_HOME%\demo\jfc\Font2DTest\Font2DTest.jar
+java -jar %JAVA_HOME%\demo\jfc\Metalworks\Metalworks.jar
+java -jar %JAVA_HOME%\demo\jfc\Notepad\Notepad.jar
+java -jar %JAVA_HOME%\demo\jfc\SampleTree\SampleTree.jar
+java -jar %JAVA_HOME%\demo\jfc\Stylepad\Stylepad.jar
+java -jar %JAVA_HOME%\demo\jfc\SwingSet2\SwingSet2.jar
+java -jar %JAVA_HOME%\demo\jfc\TableExample\TableExample.jar
+
+java -jar %JAVA_HOME%\demo\management\MemoryMonitor\MemoryMonitor.jar
+************* Run application on a port and monitor them **********************
+java -Dcom.sun.management.jmxremote.port=1090 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -jar %JAVA_HOME%\demo\jfc\Java2D\Java2Demo.jar
+
+java -jar %JAVA_HOME%\demo\management\VerboseGC\VerboseGC.jar localhost:1090 			// Monitor application on local matchine
+java -jar %JAVA_HOME%/demo/management/JTop/JTop.jar <Remote Host>:1090			// Monitor application on Remote Matchine	
+
+
+
+************************ Java application Administration Tools ****************************** IMPORTANT TOOLs $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+jcmd, JDK Mission Control (JMC), and JDK Flight Recorder (JFR) .
+HOW TO USE
+1. >jcmd -l	// list running java application with process id and main class name.  This tool is used to communicate with JVM
+>jcmd com.example.MyClass name=\"Value of name argument\"      	OR, >jcmd com.example.MyClass name="'Value of name argument'" 		OR, >jcmd com.example.MyClass name='"Value of name argument"'
+
+2. JMC		// This tool is use for monitor running java application in a jvm
+Run a java application with following options as below
+> java -Xmx32m -Xms16m -XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:+UseSerialGC -jar D:\java\jdk\jdk4_32bit\demo\jfc\Java2D\Java2Demo.jar
+
+New Switches: Notice the two unfamiliar switches on that command line.
+-XX:+UnlockCommercialFeatures
+-XX:+FlightRecorder
+The two switches enable the use of Java Flight Recorder. Therefore, these switches were used for every demo in this tutorial.
+
+NOW run java mission control tool(JMC) from other terminal. Note this tools is only available from JDK 7 update 40
+> jmc
+ This tool will open in GUI mode,Now click on 'Click here to start using Oracle Java Mission Control '. There is a left panel in which 'The JVM Running Mission Control'  Option just Right click on it and choose 'Start JMX Console' Now monitor your java application.
+
+3. JFR		// This tool used for Report jenerating
+Example 1: JFR Continuous Recording
+java -Xmx32m -Xms16m -XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:FlightRecorderOptions=defaultrecording=true,disk=true,maxage=5m -XX:+UseSerialGC -jar D:\java\jdk\jdk4_32bit\demo\jfc\Java2D\Java2Demo.jar
+
+This example starts a continuous recording, which stores a maximum of 5 minutes of data. No flight recorder file is created unless an explicit command is given from Mission Control or jcmd.
+
+Example 2: JFR Continuous Recording with Dump on Exit
+java -Xmx32m -Xms16m -XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:FlightRecorderOptions=defaultrecording=true,disk=true,maxage=5m,dumponexit=true,dumponexitpath=C:/temp/FlightRecordingDump.jfr -XX:+UseSerialGC -jar D:\java\jdk\jdk4_32bit\demo\jfc\Java2D\Java2Demo.jar
+
+This example is like example 1, but it creates a flight recording when the application exits. In this example, the flight recording is written to C:\temp.
+
+Example 3: JFR Timed Recording written to Disk
+java -Xmx32m -Xms16m -XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:FlightRecorderOptions=disk=true, -XX:StartFlightRecording=duration=2m,filename=C:/temp/2m.jfr -XX:+UseSerialGC -jar D:\java\jdk\jdk4_32bit\demo\jfc\Java2D\Java2Demo.jar
+
+This example performs a 2-minute recording and saves the result in C:\temp.
