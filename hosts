@@ -41,18 +41,18 @@
 
 # Servers on Panasonic router, if a defined domain doesn't have a folder location then that request handle by first virtual domain 
 # Postman mail server 
-192.168.43.208	smtp.mai.com
-192.168.43.208	imap.mai.com
+192.168.43.182	smtp.mai.com
+192.168.43.182	imap.mai.com
 # Apache web server 
-192.168.43.208	rocksun
-192.168.43.208	mail.mai.com
-192.168.43.208	dev.mai.com
-192.168.43.208	maiapp
-192.168.43.208	test
-192.168.43.208	mywork
-192.168.43.208	ssldomain
-192.168.43.208	www.sunny.com		# when no virtual domain work then main single domain response to request, by default this folder is www in server folder
-192.168.225.35	video
-192.168.225.35	shopping
-192.168.225.35	project.com
-192.168.225.35	MaiWordpress.com
+192.168.43.182	rocksun
+192.168.43.182	mail.mai.com
+192.168.43.182	dev.mai.com
+192.168.43.182	maiapp
+192.168.43.182	test
+192.168.43.182	mywork
+192.168.43.182	ssldomain
+192.168.43.182	www.sunny.com		# when no virtual domain work then main single domain response to request, by default this folder is www in server folder
+192.168.43.182	video
+192.168.43.182	shopping
+192.168.43.182	project.com
+192.168.43.182	MaiWordpress.com

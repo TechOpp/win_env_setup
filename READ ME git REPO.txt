@@ -1,28 +1,28 @@
 For a new project create Repository on GitHub
 
-OR, Clone any existing Repository if you want to develope its own copy of that project in other way
+OR, Clone any existing Repository if you want to develop its own copy of that project in other way
 $git clone <URL>
 
-Branch any repository if you want to fix a big bug or big changes in master repository and back mearge with master after bug fix.
+Branch any repository if you want to fix a big bug or big changes in master repository and back meagre with master after bug fix.
 
 >> Configuring and connecting to a remote repository
 Master Repository	: Store on GitHub Server
-Local Repository	: Store on your User Home space 
+Local Repository	: Store on your User Home space. This is called staging area, and when files are added in staging area it should be commit 
 Working Directory	: Any location in your computer
 
-To connect with GitHun server configure a configuration file in user home direcotry OR use following command (.gitconfig file )
+To connect with GitHub server configure a configuration file in user home directory OR use following command (.gitconfig file )
 $ git config --global user.name "<your name>"
 $ git config --global user.email "<your email>"
 
-Now the user is enable to connect with GitHub Repository. Becouser these configuration information is neede by git command to run
+Now the user is enable to connect with GitHub Repository. Because these configuration information is neede by git command to run
 Now make a clone of master Repo on Local computer. for that copy clone address of repo from GitHub
 $ git clone <URL>
 $ git remote add origin https://github.com/sunnykrbit/goLmart	// assign an existing repository to local repository
 $ git remote remove origin					// Remove repo from git index
  
-Now Master Repo is availabe in user Home space and a working directory in current location of CMD so work with this Working Directory. 
+Now Master Repo is available in user Home space and a working directory in current location of CMD so work with this Working Directory. 
 Any commit the changes in working directory will effect in local repository which is some where in user home space.
- Finaly push this local repo to master repo after work has completed
+ Finally push this local repo to master repo after work has completed
 
 Now Go inside new created working directory and write code, new file  manually or by any IDE or Software
 
@@ -33,7 +33,16 @@ $ git status		// Show all changes in Working Directory with Local Repo if any. C
 $ git add .		// Add all the changes in working directory with git command to commit in Local Repository. We can add a particular file with file name only OR any type of file with while card 
 $ git status		// After adding changes with git command chang file will green other ramain red in color
 $ git commit -m "Describe"	// Commit the changes made in the local working directory to the local repository. without any option git open vim like command prompt so you have to handle with that
+=> Each commit is assigned a SHA-1 hash which enables you to refer back to the commit in other commands.
 $ git push		// Push all the changes in Loacl Repo to Remote Repository. This will asked for user name and Password if your computer has not logged in to Git from the command line.
+
+$ git diff		// compare current with previous commit
+$ git mv		// if want to rename a file
+$ git rm		// if want to delete, these command make changes in  staging area of a file and after that those file will change in repository
+$ git diff --staged  // compare staging area
+$ git log
+$ git log --pretty=format:"%h %an %ar - %s"
+$ git show
 
 >>Pull or fetching updates from remote repository 
 PULL command to get the latest updates from repmote repo and merge them into your local repository. It verifies local repo with remote repo are the same and prevents merge conflicts.
