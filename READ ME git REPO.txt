@@ -1,3 +1,4 @@
+personal access token for one month from 2Aug21: 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
 For a new project create Repository on GitHub
 
 OR, Clone any existing Repository if you want to develop its own copy of that project in other way
@@ -28,7 +29,7 @@ Now Go inside new created working directory and write code, new file  manually o
 
 >> Basic git commands
 $ git remote		// This will shoe original means refer the remote Repository 
-$ git remote -v		// Shoe URL or PATH or Repmote Repo 
+$ git remote -v		// Shoe URL or PATH or Remote Repo 
 $ git status		// Show all changes in Working Directory with Local Repo if any. Changes in working file with local repo in red color
 $ git add .		// Add all the changes in working directory with git command to commit in Local Repository. We can add a particular file with file name only OR any type of file with while card 
 $ git status		// After adding changes with git command chang file will green other ramain red in color
