@@ -117,32 +117,32 @@ rem setting basic variable is required due to problem with classpath of "jme_lib
 				)
 
  rem This is the configuration for AWS-cli in python
-  set AWS_CONFIG_FILE=%DevDrive%\WEB_SERVERS\PyTHON\WORKSPACE\AWS_CUI_Config\config.ini
+  set AWS_CONFIG_FILE=%DevDrive%\WebServices\PyTHON\WORKSPACE\AWS_CUI_Config\config.ini
  rem This key needed by Firebase CLI to authenticate and when change the key use new terminal
   set FIREBASE_TOKEN=1//0gt3nZbZNBkrRCgYIARAAGBASNwF-L9Ir10o8ci5KqOuv5_8E76LOIUIIOTrQ9sIwVwxqKbRje8s-Np7yWTE2MRRPMDB965O4sQM
  rem ENV var to get python path for google cloud SDK should not in path. this is only used by google cloud shell
   set CLOUDSDK_PYTHON=%PY_HOME%
 
   set default_path=%HOMEDRIVE%%HOMEPATH%;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;c:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;c:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;c:\Program Files (x86)\MySQL\MySQL Utilities 1.3.6\
-  set tools=%DevDrive%\Java\maven\bin;%DevDrive%\Java\ant\bin;%DevDrive%\JAVA\jmc-8.1.0\JDK Mission Control;%DevDrive%\WORK\NASM;%DevDrive%\WORK\MinGW\mingw64\bin;%DevDrive%\TOOLS\Git\cmd;%DevDrive%\TOOLS\gawk\bin;%DevDrive%\TOOLS\cURL\bin;%DevDrive%\TOOLS\ffmpeg;%DevDrive%\TOOLS\OpenSSL\bin;%DevDrive%\TOOLS\Common;%DevDrive%\TOOLS\openshift-CLI;%DevDrive%\TOOLS\putty;%DevDrive%\WEB_SERVERS\nodejs\Yarn\bin;%DevDrive%\Java\dex2jar-2.0;%DevDrive%\WEB_SERVERS\SQLite;%DevDrive%\WEB_SERVERS\Redis;%DevDrive%\WEB_SERVERS\memcached;%DevDrive%\TOOLS\mongodb\bin;%DevDrive%\TOOLS\cmake\bin;%DevDrive%\TOOLS\cdrtools;%DevDrive%\VERTUAL_OS\qemu;%DevDrive%\TOOLS\kubernete-CLI
-  set servers=%DevDrive%\WEB_SERVERS\ApacheWebServer24\bin;%DevDrive%\WEB_SERVERS\apache-tomcat-7.0.23\bin;%DevDrive%\WEB_SERVERS\glassfish-4.1\bin;%DevDrive%\WEB_SERVERS\jboss-as-7.1.1.Final\bin
+  set tools=%DevDrive%\Java\maven\bin;%DevDrive%\Java\ant\bin;%DevDrive%\JAVA\jmc-8.1.0\JDK Mission Control;%DevDrive%\WORK\NASM;%DevDrive%\WORK\MinGW\mingw64\bin;%DevDrive%\TOOLS\Git\cmd;%DevDrive%\TOOLS\gawk\bin;%DevDrive%\TOOLS\cURL\bin;%DevDrive%\TOOLS\ffmpeg;%DevDrive%\TOOLS\OpenSSL\bin;%DevDrive%\TOOLS\Common;%DevDrive%\TOOLS\openshift-CLI;%DevDrive%\TOOLS\putty;%DevDrive%\WebServices\nodejs\Yarn\bin;%DevDrive%\Java\dex2jar-2.0;%DevDrive%\WebServices\SQLite;%DevDrive%\WebServices\Redis;%DevDrive%\WebServices\memcached;%DevDrive%\TOOLS\mongodb\bin;%DevDrive%\TOOLS\cmake\bin;%DevDrive%\TOOLS\cdrtools;%DevDrive%\VERTUAL_OS\qemu;%DevDrive%\TOOLS\kubernete-CLI
+  set servers=%DevDrive%\WebServices\ApacheWebServer24\bin;%DevDrive%\WebServices\apache-tomcat-7.0.23\bin;%DevDrive%\WebServices\glassfish-4.1\bin;%DevDrive%\WebServices\jboss-as-7.1.1.Final\bin
   set IDE=%DevDrive%\VSCodeIDE\bin;C:\Program Files\DecSoft\AppBuilder
 
   MAVEN_OPTS="-Xms256m -Xmx512m"
   set ANT_HOME=%DevDrive%\Java\ant\
   set OPENSSL_CONF=%DevDrive%\TOOLS\OpenSSL\bin\openssl.cfg
 
-  set NODE_PATH=%DevDrive%\WEB_SERVERS\nodejs\ActiveNode;%DevDrive%\WEB_SERVERS\nodejs\npm-global-repo
-  set PHP_PATH=%DevDrive%\WEB_SERVERS\php\ActivePHP;%DevDrive%\WEB_SERVERS\PHP\ActivePHP\ext;%DevDrive%\WEB_SERVERS\php\ComposerSetup
-  set PY_HOME=%DevDrive%\WEB_SERVERS\python\ActivePython
+  set NODE_PATH=%DevDrive%\WebServices\nodejs\ActiveNode;%DevDrive%\WebServices\nodejs\npm-global-repo
+  set PHP_PATH=%DevDrive%\WebServices\php\ActivePHP;%DevDrive%\WebServices\PHP\ActivePHP\ext;%DevDrive%\WebServices\php\ComposerSetup
+  set PY_HOME=%DevDrive%\WebServices\python\ActivePython
  rem PYTHONPATH env var is for looking python module path 
   set PYTHONHOME=%PY_HOME%
   set PYTHONPATH=%PY_HOME%\Scripts;%PY_HOME%
   set Clang=%DevDrive%\WORK\TinyC;%DevDrive%\WORK\BorlandCPP\Bin
-  set ruby=%DevDrive%\WEB_SERVERS\Ruby\ActiveRuby\bin
-  set RLang=%DevDrive%\WEB_SERVERS\DSci-RLan\ActiveR\bin
-  set GOPATH=%DevDrive%\WEB_SERVERS\Go\ActiveGo
-  set perl=%DevDrive%\WEB_SERVERS\Perl\ActivePerl
+  set ruby=%DevDrive%\WebServices\Ruby\ActiveRuby\bin
+  set RLang=%DevDrive%\WebServices\DSci-RLan\ActiveR\bin
+  set GOPATH=%DevDrive%\WebServices\Go\ActiveGo
+  set perl=%DevDrive%\WebServices\Perl\ActivePerl
 	set TERM=
 	set PERL_JSON_BACKEND=
 	set PERL_YAML_BACKEND=
@@ -195,13 +195,13 @@ rem setting basic variable is required due to problem with classpath of "jme_lib
   set Hybrid=%ANDROID_HOME%\tools;%ANDROID_HOME%\tools\bin;%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\emulator;%ANDROID_HOME%\build-tools\29.0.2;%GRADLE_ROOT%\bin
 
   rem deprecated classpath
-rem NOTE: jme_lib + selenium_lib + android, these 3 library make jdk 0 to 2 not working when setting in classpath, So change classpath in default Vs. Adv classpath  
+rem NOTE: jme_lib + selenium_lib + android, these 3 library make jdk 0 to 2 not working when setting in classpath, So change classpath in two part as default Vs. Adv classpath  
 rem set classpath=%classpath%;%default_classpath%%default_jar%%jvm_state%%spring%%hibernate%%jme_lib%%selenium_lib%%android%
 
 
 
 
-  ECHO Now, Java %version%, GCC, JME, JVM Monitor, Maven, Ant, MinGW64, Gradle, Selenium, php, nasm, Spring, Hibernate, openssl, Nodejs, python, Ruby, Putty, SQLite, Redis, Memcache, IONIC, Cordova, 4 variants of C, CPP are availables... rem '&' will ignore to printing remaining part of echo
+  ECHO Now, Java %version%, JME, JVM Monitor, Maven, Ant, Gradle, Selenium, Spring, Hibernate, nasm, MinGW64(GCC), php, Nodejs, python, Ruby, Perl,Putty, openssl, SQLite, Redis, Memcache, IONIC, Cordova, 4 variants of C, CPP are availables... rem '&' will ignore to printing remaining part of echo
 
   :path
 rem An environment variable can only holds maximum 8192 length of value to a variable, and at current time the length of classpath variable for Advance is 7844, So there is only available length is 348 
@@ -209,8 +209,9 @@ rem An environment variable can only holds maximum 8192 length of value to a var
   set classpath=%classpath%;%default_classpath%%default_jar%%jvm_state%
   set adv=%spring%%hibernate%%jme_lib%%selenium_lib%%android%
   
+rem if java is not basic then add advanced jar(Technologies) in classpath  
   if not "%basic%"=="yes"  set classpath=%classpath%%adv%
-  
+rem when SunEnv is not same as TechOpp then will not work this dev environment  
   if not "%SunEnv%"=="TechOpp"	set path=%default_path%;%java_path%;%tools%;%jvmstat_home%\bat;%servers%;%jme_path%;%NODE_PATH%;%PHP_PATH%;%PYTHONPATH%;%Clang%;%Hybrid%;%CrossBrowserAppTest%;%IDE%;%ruby%;%RLang%;%GOPATH%\bin;%perl_path%
 
 

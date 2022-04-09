@@ -12,13 +12,19 @@ Local Repository	: Store on your User Home space. This is called staging area, a
 Working Directory	: Any location in your computer
 
 To connect with GitHub server configure a configuration file in user home directory OR use following command (.gitconfig file )
+$ git config -l
 $ git config --global user.name "<your name>"
 $ git config --global user.email "<your email>"
 
 Now the user is enable to connect with GitHub Repository. Because these configuration information is neede by git command to run
 Now make a clone of master Repo on Local computer. for that copy clone address of repo from GitHub
 $ git clone <URL>
+You can only push to two types of URL addresses:
+An HTTPS URL like https://github.com/user/repo.git
+An SSH URL, like git@github.com:user/repo.git
+
 $ git remote add origin https://github.com/sunnykrbit/goLmart	// assign an existing repository to local repository
+$ git remote set-url						// set new master repository
 $ git remote remove origin					// Remove repo from git index
  
 Now Master Repo is available in user Home space and a working directory in current location of CMD so work with this Working Directory. 
@@ -31,15 +37,15 @@ Now Go inside new created working directory and write code, new file  manually o
 $ git remote		// This will shoe original means refer the remote Repository 
 $ git remote -v		// Shoe URL or PATH or Remote Repo 
 $ git status		// Show all changes in Working Directory with Local Repo if any. Changes in working file with local repo in red color
-$ git add .		// Add all the changes in working directory with git command to commit in Local Repository. We can add a particular file with file name only OR any type of file with while card 
+$ git add .			// Add all the changes in working directory with git command to commit in Local Repository. We can add a particular file with file name only OR any type of file with while card 
 $ git status		// After adding changes with git command chang file will green other ramain red in color
 $ git commit -m "Describe"	// Commit the changes made in the local working directory to the local repository. without any option git open vim like command prompt so you have to handle with that
 => Each commit is assigned a SHA-1 hash which enables you to refer back to the commit in other commands.
-$ git push		// Push all the changes in Loacl Repo to Remote Repository. This will asked for user name and Password if your computer has not logged in to Git from the command line.
+$ git push			// Push all the changes in Local Repo to Remote Repository. This will asked for user name and Password if your computer has not logged in to Git from the command line.
 
-$ git diff		// compare current with previous commit
-$ git mv		// if want to rename a file
-$ git rm		// if want to delete, these command make changes in  staging area of a file and after that those file will change in repository
+$ git diff			// compare current with previous commit
+$ git mv			// if want to rename a file
+$ git rm			// if want to delete, these command make changes in  staging area of a file and after that those file will change in repository
 $ git diff --staged  // compare staging area
 $ git log
 $ git log --pretty=format:"%h %an %ar - %s"
@@ -48,7 +54,7 @@ $ git show
 >>Pull or fetching updates from remote repository 
 PULL command to get the latest updates from repmote repo and merge them into your local repository. It verifies local repo with remote repo are the same and prevents merge conflicts.
 $ git pull			// Required before PUSH command when project is developed by other developer also.
-$ git fetch		// get all changes and updates from remote repo  without merging them to local repo.
+$ git fetch			// get all changes and updates from remote repo  without merging them to local repo.
 
 >> Deal with Git merge conflict
 When multipeles peoples working on same files you are going to encounter merge conflict. When a conflict occurs, Git modifies your local files and it is up to you to manually fix the files with the conflicts.
@@ -72,7 +78,7 @@ $ git branch <New Branch> 		// create a branch in your local repository and work
 $ git checkout <Branch Name>	// switch to the branch. Now prompt will change from master to brach to show where you are woring now. Now use all thing as master git but changes will in branch
 $ git branch 			// show local repo branch only
 $ git branch -a			// show all local and remote branches
-$ git push --set-upstream origin <Branch Name>	// Push Brach to remote repository
+$ git push --set-upstream origin <Branch Name>	// Push Branch to remote repository
 $ git checkout master		// switch back to master repository
 >> merge a branch back into the master or other branch
 Go back or checkout to the master (or, other branch) in which you want to mearge the branch
@@ -94,11 +100,11 @@ Say you’ve got an existing project that you want to start tracking with git.
 
 Go into the directory containing the project.
 $ git init
-$ git add 		//to add all of the relevant files.
+$ git add .		//to add all of the relevant files.
 You’ll probably want to create a .gitignore file right away, to indicate all of the files you don’t want to track. Use git add .gitignore, too.
 $ git commit
 Connect it to github
-You’ve now got a local git repository. You can use git locally, like that, if you want. But if you want the thing to have a home on github, do the following.
+You’ve now got a local git repository. You can use git locally, like that, as you want. But if you want the thing to have a home on github, do the following.
 
 Go to github.
 Log in to your account.
