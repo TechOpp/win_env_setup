@@ -34,8 +34,8 @@ Any commit the changes in working directory will effect in local repository whic
 Now Go inside new created working directory and write code, new file  manually or by any IDE or Software
 
 >> Basic git commands
-$ git remote		// This will shoe original means refer the remote Repository 
-$ git remote -v		// Shoe URL or PATH or Remote Repo 
+$ git remote		// This will show original means refer the remote Repository 
+$ git remote -v		// Show URL or PATH or Remote Repo 
 $ git status		// Show all changes in Working Directory with Local Repo if any. Changes in working file with local repo in red color
 $ git add .			// Add all the changes in working directory with git command to commit in Local Repository. We can add a particular file with file name only OR any type of file with while card 
 $ git status		// After adding changes with git command chang file will green other ramain red in color
